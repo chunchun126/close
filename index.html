@@ -27,7 +27,9 @@
         if (isiPad || isiPhone) {
           setTimeout(function(){ 
             var sURL = unescape("https://www.bonuswinner.com.tw/");
-            window.location.replace(sURL);
+            // window.location.replace(sURL);
+            window.open('', '_self')
+            window.close();
           }, 300);
         } else {
           window.close();
