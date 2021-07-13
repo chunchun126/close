@@ -11,9 +11,11 @@
 
   <script>
     function closeWin() {
-      window.open('', '_self')
-      window.history.back()
-      window.close()
+      setTimeout(function(){ 
+        window.open('','_self');
+        window.history.back();
+        window.close();
+      }, 350);
     }
   </script>
 </body>
