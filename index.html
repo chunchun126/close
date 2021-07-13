@@ -10,12 +10,28 @@
   <button onclick="closeWin()">close</button>
 
   <script>
+    // function closeWin() {
+    //   setTimeout(function(){ 
+    //     window.open('','_self');
+    //     window.history.back();
+    //     window.close();
+    //   }, 350);
+    // }
+    // function refresh() {
+    //     var sURL = unescape("https://www.bonuswinner.com.tw/");
+    //     window.location.replace(sURL);
+    // }
     function closeWin() {
-      setTimeout(function(){ 
-        window.open('','_self');
-        window.history.back();
-        window.close();
-      }, 350);
+        var isiPad = navigator.userAgent.match(/iPad/i) != null;
+        var isiPhone = navigator.userAgent.match(/iPhone/i) != null;
+        if (isiPad || isiPhone) {
+          setTimeout(function(){ 
+            var sURL = unescape("https://www.bonuswinner.com.tw/");
+            window.location.replace(sURL);
+          }, 300);
+        } else {
+          window.close();
+        }
     }
   </script>
 </body>
